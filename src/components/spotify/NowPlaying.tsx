@@ -151,14 +151,12 @@ export const Player: React.FC<IPlayerProps> = ({
             text-overflow: ellipsis;
             width: 170px;
             white-space: nowrap;
-            color: #C58545;
           }
           
           #title {
             animation-delay: 0ms;
             margin: .5rem;
             text-align: center;
-            color: #C58545;
           }
           
           #track {
