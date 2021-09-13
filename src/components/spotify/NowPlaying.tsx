@@ -57,7 +57,7 @@ export const Player: React.FC<IPlayerProps> = ({
           style={{
             alignItems: 'center',
             display: 'flex',
-            background: 'rgb(255,255,255,.6)',
+            background: 'rgb(40,40,40,.6)',
             border: '1px solid rgba(125, 125, 125, .3)',
             borderRadius: '.3rem',
             margin: '.5rem 0',
@@ -86,7 +86,7 @@ export const Player: React.FC<IPlayerProps> = ({
             </Text>
 
             <Text
-              color={ !track ? 'gray' : undefined }
+              color={ !track ? 'white' : undefined }
               id="artist"
               size="small">
               { artist || 'Nothing Currently' }
@@ -229,7 +229,7 @@ export const Player: React.FC<IPlayerProps> = ({
           
           .paused { 
             animation-play-state: paused !important;
-            background: #e1e4e8 !important;
+            background: #282828 !important;
           }
           
           @keyframes cover-appear {
