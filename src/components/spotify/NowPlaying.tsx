@@ -36,7 +36,7 @@ export const Player: React.FC<IPlayerProps> = ({
         color="standard"
         size="title"
         weight="bold">
-        { isPlaying ? 'currently jamming out to' : 'last jammed out to' }
+        { isPlaying ? '' : '' }
       </Text>
 
       <div className="now-playing-wrapper">
@@ -195,7 +195,7 @@ export const Player: React.FC<IPlayerProps> = ({
             --offset: 0;
 
             animation: bars ${ audioFeatures ? (audioFeatures.tempo / 60) * 1 : 1 }s ease calc(var(--offset) * -.5s) infinite;
-            background: rgba(${ audioFeatures ? audioFeatures.energy * 255 : 255 }, ${ audioFeatures ? audioFeatures.valence * 255 : 255 }, ${ audioFeatures ? audioFeatures.danceability * 255 : 255 }, .7);
+            background: rgba(197, 133, 69, .7);
             height: 10px;
             margin: 2px 0;
             width: 50px;
@@ -203,7 +203,7 @@ export const Player: React.FC<IPlayerProps> = ({
           
           .progress-bar {
             animation-delay: 550ms;
-            border: 1px solid #e1e4e8;
+            border: 1px solid #c58545;
             border-radius: 4px;
             height: 4px;
             margin: -1px;
@@ -218,7 +218,7 @@ export const Player: React.FC<IPlayerProps> = ({
           #progress {
             animation: progress ${duration}ms linear;
             animation-delay: -${progress}ms;
-            background-color: #24292e;
+            background-color: #c58545;
             height: 6px;
             left: 0;
             position: absolute;
