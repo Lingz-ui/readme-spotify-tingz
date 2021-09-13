@@ -33,7 +33,7 @@ export const Player: React.FC<IPlayerProps> = ({
       width="466">
       <Text
         id="title"
-        color="standard"
+        color="#c58545"
         size="title"
         weight="bold">
         { isPlaying ? '' : '' }
@@ -80,13 +80,14 @@ export const Player: React.FC<IPlayerProps> = ({
               marginTop: -4,
             }}>
             <Text
+              color="#c58545"
               id="track"
               weight="bold">
               { `${track ?? ''} `.trim() }
             </Text>
 
             <Text
-              color={ !track ? 'white' : undefined }
+              color="#c58545"
               id="artist"
               size="small">
               { artist || 'Nothing Currently' }
@@ -150,12 +151,14 @@ export const Player: React.FC<IPlayerProps> = ({
             text-overflow: ellipsis;
             width: 170px;
             white-space: nowrap;
+            color: #C58545;
           }
           
           #title {
             animation-delay: 0ms;
             margin: .5rem;
             text-align: center;
+            color: #C58545;
           }
           
           #track {
