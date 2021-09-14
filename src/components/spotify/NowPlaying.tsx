@@ -62,7 +62,7 @@ export const Player: React.FC<IPlayerProps> = ({
             borderRadius: '.3rem',
             margin: '.5rem 0',
             padding: '.6rem',
-            paddingLeft: 6,
+            paddingLeft: 8,
             paddingTop: 8,
           }}>
           <img
