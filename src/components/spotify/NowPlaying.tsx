@@ -58,11 +58,11 @@ export const Player: React.FC<IPlayerProps> = ({
             alignItems: 'center',
             display: 'flex',
             background: 'rgb(40,40,40,.6)',
-            border: '1px solid rgba(125, 125, 125, .3)',
+            border: '1px solid rgba(40, 40, 40, .3)',
             borderRadius: '.3rem',
             margin: '.5rem 0',
             padding: '.6rem',
-            paddingLeft: 4,
+            paddingLeft: 6,
             paddingTop: 8,
           }}>
           <img
@@ -73,6 +73,7 @@ export const Player: React.FC<IPlayerProps> = ({
 
           <div
             style={{
+              color: '#c58545'
               display: 'flex',
               flex: 1,
               flexDirection: 'column',
