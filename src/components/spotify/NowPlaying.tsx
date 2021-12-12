@@ -172,6 +172,7 @@ export const Player: React.FC<IPlayerProps> = ({
             animation-delay: 300ms;
             animation-name: cover-appear;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 3px 10px rgba(0,0,0,0.05);
+            border-radius: 6px;
           }
           
           #cover:not([src]) {
