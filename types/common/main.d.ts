@@ -1,4 +1,57 @@
-// Spotify
+interface IArtistSimplifiedObject {
+  external_urls: object
+  href: string;
+  id: string;
+  name: string;
+  type: string;
+  uri: string;
+}
+
+interface IImageObject {
+  height: number;
+  url: string;
+  width: number;
+}
+
+interface IAlbumSimplifiedObject {
+  album_type: string;
+  artists: Array<IArtistSimplifiedObject>
+  available_markets: Array<string>
+  external_urls: object;
+  href: string;
+  id: string;
+  images: Array<IImageObject>
+  name: string;
+  release_date: string;
+  release_date_precision: string;
+  total_tracks: number;
+  type: string;
+  uri: string;
+}
+
+interface IExternalUrls {
+  spotify: string;
+}
+
+interface ITrackObject {
+  album: IAlbumSimplifiedObject;
+  artists: Array<IArtistSimplifiedObject>
+  available_markets: Array<string>
+  disc_number: number;
+  duration_ms: number;
+  explicit: boolean;
+  external_ids: object;
+  external_urls: IExternalUrls;
+  href: string;
+  id: string;
+  is_local: boolean;
+  name: string;
+  popularity: number;
+  preview_url: string;
+  track_number: number;
+  type: string;
+  uri: string;
+}
 
 interface ICurrentlyPlayingResponse {
   context: object | null;
@@ -32,59 +85,14 @@ interface IAudioFeaturesResponse {
   type : string;
 }
 
-interface ITrackArtistObject {
-  external_urls: object
+interface ICursorBasedPagingObject<T> {
   href: string;
-  id: string;
-  name: string;
-  type: string;
-  uri: string;
-}
-
-interface ITrackAlbumImageObject {
-  height: number;
-  url: string;
-  width: number;
-}
-
-interface ITrackAlbumObject {
-  album_type: string;
-  artists: Array<ITrackArtistObject>
-  available_markets: Array<string>
-  external_urls: object;
-  href: string;
-  id: string;
-  images: Array<ITrackAlbumImageObject>
-  name: string;
-  release_date: string;
-  release_date_precision: string;
-  total_tracks: number;
-  type: string;
-  uri: string;
-}
-
-interface IExternalUrls {
-  spotify: string;
-}
-
-interface ITrackObject {
-  album: ITrackAlbumObject;
-  artists: Array<ITrackArtistObject>
-  available_markets: Array<string>
-  disc_number: number;
-  duration_ms: number;
-  explicit: boolean;
-  external_ids: object;
-  external_urls: IExternalUrls;
-  href: string;
-  id: string;
-  is_local: boolean;
-  name: string;
-  popularity: number;
-  preview_url: string;
-  track_number: number;
-  type: string;
-  uri: string;
+  items: Array<T>;
+  limit: number;
+  next: string;
+  cursors: object;
+  total: number;
+  Authorization: string;
 }
 
 interface IPagingObject<T> {
@@ -97,23 +105,6 @@ interface IPagingObject<T> {
   total: number;
 }
 
-interface IConvertedTrack {
-  cover: string;
-  artist: string;
-  track: string;
-  href: string;
-}
-
-interface ICursorBasedPagingObject<T> {
-  href: string;
-  items: Array<T>;
-  limit: number;
-  next: string;
-  cursors: object;
-  total: number;
-  Authorization: string;
-}
-
 interface ITrackSimplifiedObject {
   id: string;
 }
@@ -124,15 +115,16 @@ interface IPlayHistoryObject {
   context: object;
 }
 
-// Misc
-
-interface ISkillPath {
-  type: string;
-  fill: string;
-  d: string;
-  fillRule: string;
-  clipRule: string;
-  styles: string;
-  transform?: string;
+interface IAuthorizationTokenResponse {
+  access_token: string;
+  token_type: string;
+  scope: string;
+  expires_in: number;
 }
 
+interface IConvertedTrackObject {
+  image: string;
+  artist: string;
+  name: string;
+  href: string;
+}

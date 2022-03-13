@@ -73,7 +73,7 @@ export const Player: React.FC<IPlayerProps> = ({
 
           <div
             style={{
-              color: '#c58545'
+              color: '#c58545',
               display: 'flex',
               flex: 1,
               flexDirection: 'column',
