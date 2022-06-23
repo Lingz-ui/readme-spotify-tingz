@@ -84,14 +84,14 @@ export const Player: React.FC<IPlayerProps> = ({
               color="#fff80b"
               id="track"
               weight="bold">
-              Squad 404 - Girl Frontline
+              "Squad 404 - Girl Frontline"
             </Text>
 
             <Text
               color="#fff80b"
               id="artist"
               size="small">
-              Sunborn 
+              "Sunborn"
             </Text>
             {track && (
               <div className="progress-bar">
