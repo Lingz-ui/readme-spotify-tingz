@@ -33,7 +33,7 @@ export const Player: React.FC<IPlayerProps> = ({
       width="466">
       <Text
         id="title"
-        color="#c58545"
+        color="#fff80b"
         size="title"
         weight="bold">
         { isPlaying ? '' : '' }
@@ -68,12 +68,12 @@ export const Player: React.FC<IPlayerProps> = ({
           <img
             id="cover"
             height="48"
-            src={ cover ?? null }
+            src="https://rawcdn.githack.com/Lingz-ui/data-myBot/ad3c8603dee6edacf6c8b64becb41d0e7d21e8f1/20220226_092135.jpg"
             width="48" />
 
           <div
             style={{
-              color: '#c58545',
+              color: '#fff80b',
               display: 'flex',
               flex: 1,
               flexDirection: 'column',
@@ -81,17 +81,17 @@ export const Player: React.FC<IPlayerProps> = ({
               marginTop: -4,
             }}>
             <Text
-              color="#c58545"
+              color="#fff80b"
               id="track"
               weight="bold">
-              { `${track ?? ''} `.trim() }
+              Squad 404 - Girl Frontline
             </Text>
 
             <Text
-              color="#c58545"
+              color="#fff80b"
               id="artist"
               size="small">
-              { artist || 'Nothing Currently' }
+              Sunborn 
             </Text>
             {track && (
               <div className="progress-bar">
@@ -206,7 +206,7 @@ export const Player: React.FC<IPlayerProps> = ({
           
           .progress-bar {
             animation-delay: 550ms;
-            border: 1px solid #c58545;
+            border: 1px solid #fff80b;
             border-radius: 4px;
             height: 4px;
             margin: -1px;
@@ -221,7 +221,7 @@ export const Player: React.FC<IPlayerProps> = ({
           #progress {
             animation: progress ${duration}ms linear;
             animation-delay: -${progress}ms;
-            background-color: #c58545;
+            background-color: #fff80b;
             height: 6px;
             left: 0;
             position: absolute;
